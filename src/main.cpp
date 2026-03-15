@@ -145,7 +145,7 @@ void loop() {
   float espC = readEsp32InternalTempC();
 
   // Build JSON payload
-  char payload[500];
+  char payload[1000];
   snprintf(payload, sizeof(payload),
     "{"
       "\"t1_external\": %.2f, \"t1_cold_junction\": %.2f, \"t1_fault\": \"%s\", "
