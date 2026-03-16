@@ -161,10 +161,14 @@ void loop() {
     espC
   );
 
-  Serial.print("Publishing: ");
+  bool ok = client.publish(mqtt_topic, payload);
+  if (!ok) {
+    Serial.println("MQTT Publish FAILED");
+  }
+
+  Serial.print("MQTT Payload: ");
   Serial.println(payload);
 
-  client.publish(mqtt_topic, payload);
 
   delay(2000);
 }
