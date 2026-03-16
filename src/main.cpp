@@ -1,10 +1,11 @@
 #include <Adafruit_MAX31855.h>
 #include <PubSubClient.h>
 #include <WiFi.h>
+#include "config.h"
 
 // --- WiFi credentials ---
-const char* ssid     = "Saddleback-2.4G";
-const char* password = "1492cstob";
+const char* ssid     = WIFI_SSID;
+const char* password = WIFI_PASSWORD;
 
 // --- MQTT Broker ---
 const char* mqtt_server = "192.168.1.100";
